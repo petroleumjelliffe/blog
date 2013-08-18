@@ -7,15 +7,6 @@ title: Your New Jekyll Site
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-<<<<<<< HEAD
-      * <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    
-  </ul>
-  
-  
-</div>
-=======
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
     
@@ -23,4 +14,3 @@ title: Your New Jekyll Site
   </ul>
 
 </div>
->>>>>>> d045b0770e1d94426789bdeca9b90adeecdad2f6

@@ -9,5 +9,14 @@ title: Your New Jekyll Site
     {% for post in site.posts %}
       # <span>{{ post.date | date_to_string }}</span> &raquo; [{{ post.title }}]({{ post.url }}">)
     {% endfor %}
+    
+    
+  </ul>
+  <ul class="categories">
+    {% for cat site.posts.categories %}
+      # {{ cat }}
+    {% endfor %}
+    
+    
   </ul>
 </div>

@@ -1,0 +1,104 @@
+---
+title: WMG D2C Pattern Library
+
+#Update the library outline below, and the template will take care of the rest.
+
+library:
+ - header: Global Page Elements
+   items: 
+    - label: Logo and navigation
+      examples:
+      - demo: demo 1
+        link: http://demo.com
+    - label: Carousels
+      examples:
+      - demo: fixed height, 100% width
+        link: http://cdpn.io/ucyLa
+      - demo: fixed height, 100% width & foreground image 
+        link: http://cdpn.io/wFLui
+      - demo: fixed height, fixed width, with Button
+        link: http://cdpn.io/JnDKc
+      - demo: full bleed (height and width)
+        link: http://cdpn.io/JmlpE
+      - demo: fixed full bleed with scroll overlay
+        link: http://codepen.io/wead2c/full/wclAE
+      - demo: maintain aspect ratio, fixed width
+    - label: Logo and navigation
+      examples:
+      - demo: demo 1
+        link: http://demo.com
+    - label: Logo and navigation
+      examples:
+      - demo: demo 1
+        link: http://demo.com
+ - header: Page Layouts
+   items:
+    - label: nested product Two
+ - header: Admin
+   items:
+    - label: nested product Two
+    
+    
+    
+---
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/css/patterns.css">
+	<title>Responsive Web Design Patterns</title>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div role="main">
+			<h1>Responsive Patterns</h1>
+
+			<p class="intro">A library of responsive design examples for <strong >designers</strong> and <strong>developers</strong>. </p>
+			
+			
+{% for set in page.library %}			
+			<div class="grid" id="{{ set.header | downcase | replace:' ','-' }}">
+			
+				<h2><a href="#{{ set.header | downcase | replace:' ','-' }}">{{ set.header }}</a></h2>
+				
+{% if set.items %}
+{% for example in set.items %}			
+				
+				<section id="{{ example.label | downcase | replace:' ','-' }}">
+					<h3><a href="#{{ example.label | downcase | replace:' ','-' }}">{{ example.label }}</a></h3>
+					<ul>
+					
+{% for n in example.examples %}  
+    				<li><a href="{% if n.link %}{{ n.link }}{% endif %}">{{ n.demo }}</a></li>
+					{% endfor %}</ul>
+				</section>
+{% endfor %}{% endif %}
+				
+			</div>
+{% endfor %}
+
+		</div>
+	</div>
+	<footer role="contentinfo">
+		<div>
+			<nav id="menu">
+				<ul role="navigation" class="nav">
+					<li><a href="{{ site.baseurl }}/" class="nav-home">WEA D2C Artist.com</strong></a></li>
+					<li><a href="{{ site.baseurl }}/patterns.html">Patterns</a></li>
+					<li><a href="https://wead2c.basecamphq.com/projects/10603640-responsive-mobile-starter-site/posts">Basecamp</a></li>
+					<li><a href="https://wead2c.atlassian.net/secure/RapidBoard.jspa?rapidView=4&view=planning">JIRA</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

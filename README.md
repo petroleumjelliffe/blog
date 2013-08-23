@@ -1,4 +1,4 @@
 blog
 ====
 
-[View blog](https://petroleumjelliffe.github.io/blog)
+[View blog](https://petroleumjelliffe.github.io/blog/)

@@ -1,4 +1,2 @@
-blog
-====
-
-jekyll test
+[View blog &raquo;](https://petroleumjelliffe.github.io/blog/)
+===

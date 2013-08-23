@@ -1,2 +1,2 @@
-[View blog &raquo;](https://petroleumjelliffe.github.io/blog/)
+[View blog &raquo;]({{ site.baseurl }}/)
 ===

@@ -1,0 +1,31 @@
+---
+title: Books Read
+layout: default
+
+books:
+- *hero:
+  - title: Hero with a Thousand Faces
+    author: *campbell Joseph Campbell
+    isbn: 345345
+- *hyperion
+  
+  
+
+log:
+- book: &hero
+  start: 2013-12-30 13:12:25
+
+- book: &hyperion
+  start: 2013-12-18 21:26:27 
+  end: 2013-12-29 23:32:31
+  thoughts: |
+---
+
+<ul>
+{% for book in page.log %}
+  <li>book.book.title - {{book.start | minus:book.finish}}</li>
+{% endfor %}
+</ul>
+
+//{{’now’ | date: “%s” | minus : 604800 | date: “%b %d, %Y %I:%M %p -0500” | uri_encode | replace:“+”,“%20”}}
+//http://stackoverflow.com/questions/21056965/date-math-manipulation-in-liquid-template-filter
